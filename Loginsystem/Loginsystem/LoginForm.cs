@@ -45,37 +45,35 @@ namespace Loginsystem
 
             try
             {
-
                 MySqlConnection.Open();
                 MySqlReader = MySqlCommand.ExecuteReader();
 
                 if (MySqlReader.HasRows)
                 {
 
-                    while (MySqlReader.Read())
+                    MySqlReader.Read();
+                    
+                    const int POS_PASSWD = 2;
+
+                    if (textBoxPassword.Text == MySqlReader.GetString(POS_PASSWD))
                     {
-                       
-                        if (textBoxPassword.Text == MySqlReader.GetString(2))
-                        {
-                            MessageBox.Show("Login Successfull");
-                        }
-                        else
-                        {
-                            MessageBox.Show("Username or Password a wrong");
-                        }
+                        MessageBox.Show("Login Successfull");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Username or Password wrong");
                     }
                 }
-                else {
-                    MessageBox.Show("Username or Password a wrong");
+                else
+                {
+                    MessageBox.Show("Username or Password wrong");
                 }
-
+                MySqlConnection.Close();
             }
-            catch (Exception ex){
-
-                MessageBox.Show("Username or Password a wrong");
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error");
             }
-
-            MySqlConnection.Close();
             textBoxUsername.Text = "";
             textBoxPassword.Text = "";
         }
