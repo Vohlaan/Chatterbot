@@ -1,1 +1,10 @@
 C:\Users\patrick\Documents\GitHub\test_projects\Loginsystem\Loginsystem\bin\Debug\Loginsystem.exe.config
+C:\Users\H3E\Documents\GitHub\test_projects\Loginsystem\Loginsystem\bin\Debug\Loginsystem.exe.config
+C:\Users\H3E\Documents\GitHub\test_projects\Loginsystem\Loginsystem\bin\Debug\Loginsystem.exe
+C:\Users\H3E\Documents\GitHub\test_projects\Loginsystem\Loginsystem\bin\Debug\Loginsystem.pdb
+C:\Users\H3E\Documents\GitHub\test_projects\Loginsystem\Loginsystem\obj\Debug\Loginsystem.csprojResolveAssemblyReference.cache
+C:\Users\H3E\Documents\GitHub\test_projects\Loginsystem\Loginsystem\obj\Debug\Loginsystem.Properties.Resources.resources
+C:\Users\H3E\Documents\GitHub\test_projects\Loginsystem\Loginsystem\obj\Debug\Loginsystem.csproj.GenerateResource.Cache
+C:\Users\H3E\Documents\GitHub\test_projects\Loginsystem\Loginsystem\obj\Debug\Loginsystem.exe
+C:\Users\H3E\Documents\GitHub\test_projects\Loginsystem\Loginsystem\obj\Debug\Loginsystem.pdb
+C:\Users\H3E\Documents\GitHub\test_projects\Loginsystem\Loginsystem\obj\Debug\Loginsystem.LoginForm.resources
