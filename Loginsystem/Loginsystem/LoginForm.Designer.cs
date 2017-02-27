@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.statusStripButton = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabelTitelTime = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabelTimeText = new System.Windows.Forms.ToolStripStatusLabel();
             this.CurrentTimeTimer = new System.Windows.Forms.Timer(this.components);
@@ -43,7 +43,7 @@
             this.textBoxUsername = new System.Windows.Forms.TextBox();
             this.textBoxPassword = new System.Windows.Forms.TextBox();
             this.labelTextVersion = new System.Windows.Forms.Label();
-            this.statusStrip1.SuspendLayout();
+            this.statusStripButton.SuspendLayout();
             this.groupBoxLogin.SuspendLayout();
             this.groupBoxUser.SuspendLayout();
             this.groupBoxVersion.SuspendLayout();
@@ -51,16 +51,16 @@
             this.groupBoxPassword.SuspendLayout();
             this.SuspendLayout();
             // 
-            // statusStrip1
+            // statusStripButton
             // 
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.statusStripButton.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabelTitelTime,
             this.toolStripStatusLabelTimeText});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 239);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(284, 22);
-            this.statusStrip1.TabIndex = 0;
-            this.statusStrip1.Text = "statusStrip1";
+            this.statusStripButton.Location = new System.Drawing.Point(0, 239);
+            this.statusStripButton.Name = "statusStripButton";
+            this.statusStripButton.Size = new System.Drawing.Size(284, 22);
+            this.statusStripButton.TabIndex = 0;
+            this.statusStripButton.Text = "statusStripButton";
             // 
             // toolStripStatusLabelTitelTime
             // 
@@ -173,14 +173,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
             this.Controls.Add(this.groupBoxLogin);
-            this.Controls.Add(this.statusStrip1);
+            this.Controls.Add(this.statusStripButton);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.Load += new System.EventHandler(this.LoginForm_Load);
-            this.statusStrip1.ResumeLayout(false);
-            this.statusStrip1.PerformLayout();
+            this.statusStripButton.ResumeLayout(false);
+            this.statusStripButton.PerformLayout();
             this.groupBoxLogin.ResumeLayout(false);
             this.groupBoxUser.ResumeLayout(false);
             this.groupBoxVersion.ResumeLayout(false);
@@ -196,7 +196,7 @@
 
         #endregion
 
-        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.StatusStrip statusStripButton;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelTitelTime;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelTimeText;
         private System.Windows.Forms.Timer CurrentTimeTimer;
