@@ -8,3 +8,6 @@ C:\Users\H3E\Documents\GitHub\test_projects\Loginsystem\Loginsystem\obj\Debug\Lo
 C:\Users\H3E\Documents\GitHub\test_projects\Loginsystem\Loginsystem\obj\Debug\Loginsystem.exe
 C:\Users\H3E\Documents\GitHub\test_projects\Loginsystem\Loginsystem\obj\Debug\Loginsystem.pdb
 C:\Users\H3E\Documents\GitHub\test_projects\Loginsystem\Loginsystem\obj\Debug\Loginsystem.LoginForm.resources
+C:\Users\H3E\Documents\GitHub\test_projects\Loginsystem\Loginsystem\bin\Debug\MySql.Data.dll
+C:\Users\H3E\Documents\GitHub\test_projects\Loginsystem\Loginsystem\bin\Debug\Google.Protobuf.dll
+C:\Users\H3E\Documents\GitHub\test_projects\Loginsystem\Loginsystem\bin\Debug\MySql.Data.xml
