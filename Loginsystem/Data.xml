@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <Information>
+    <Database>
+      <datasource></datasource>
+      <port></port>
+      <username></username>
+      <password></password>
+      <database></database>
+    </Database>
+  </Information>
+</root>
