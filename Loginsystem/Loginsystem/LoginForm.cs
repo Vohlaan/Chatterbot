@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using System.Xml;
+using System.IO;
 
 namespace Loginsystem
 {
@@ -31,11 +32,30 @@ namespace Loginsystem
 
         private void buttonLogin_Click(object sender, EventArgs e)
         {
+            /*
+             2. Crypto
+            */
 
-            string SQLDatabaseName = "lizenz";
-            string SQLConnectionString = "datasource=127.0.0.1;port=3306;username=root;password=;database=" + SQLDatabaseName + ";";
+            string SQLConnectionString = null;
+            string Execute = "SELECT * FROM ID where USERNAME = '" + textBoxUsername.Text + "'";
 
-            string Execute = "SELECT * FROM ID where USERNAME = '" +textBoxUsername.Text+ "'";
+            XmlDocument xmlDoc = new XmlDocument();
+            xmlDoc.Load("C:\\Users\\H3E\\Documents\\GitHub\\test_projects\\Loginsystem\\Data.xml"); //Path aendern noch (nicht schoen geloest)
+
+            XmlNodeList xmlListNode = xmlDoc.SelectNodes("root/Information/Database");
+            foreach (XmlNode iCounterNode in xmlListNode)
+            {
+                string datasource = iCounterNode["datasource"].InnerText;
+                string port = iCounterNode["port"].InnerText;
+
+                string username = iCounterNode["username"].InnerText;
+                string password = iCounterNode["password"].InnerText;
+
+                string database = iCounterNode["database"].InnerText;
+                
+
+                SQLConnectionString = "datasource=" + datasource + ";" + "port=" + port + ";" + "username=" + username + ";" + "password=" + password + ";" + "database=" + database + ";";
+            }
 
             MySqlConnection MySqlConnection = new MySqlConnection(SQLConnectionString);
             MySqlCommand MySqlCommand = new MySqlCommand(Execute, MySqlConnection);
@@ -45,7 +65,7 @@ namespace Loginsystem
 
             try
             {
-                MySqlConnection.Open();
+                MySqlConnection.Open(); //Open the sql connection
                 MySqlReader = MySqlCommand.ExecuteReader();
 
                 if (MySqlReader.HasRows)
@@ -53,7 +73,7 @@ namespace Loginsystem
 
                     MySqlReader.Read();
                     
-                    const int POS_PASSWD = 2;
+                    const int POS_PASSWD = 2; /*Naja geht halt so warum nicht global ? :=) */
 
                     if (textBoxPassword.Text == MySqlReader.GetString(POS_PASSWD))
                     {
@@ -68,12 +88,13 @@ namespace Loginsystem
                 {
                     MessageBox.Show("Username or Password wrong");
                 }
-                MySqlConnection.Close();
+                MySqlConnection.Close(); //Closing the sql connection
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error");
             }
+
             textBoxUsername.Text = "";
             textBoxPassword.Text = "";
         }

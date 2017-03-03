@@ -2,11 +2,11 @@
 <root>
   <Information>
     <Database>
-      <datasource></datasource>
-      <port></port>
-      <username></username>
+      <datasource>127.0.0.1</datasource>
+      <port>3306</port>
+      <username>root</username>
       <password></password>
-      <database></database>
+      <database>lizenz</database>
     </Database>
   </Information>
 </root>
