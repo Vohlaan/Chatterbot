@@ -20,11 +20,12 @@ namespace Loginsystem
 
         private void buttonSendToDataBase_Click(object sender, EventArgs e)
         {
-            MySqlConnection MySqlConnection = new MySqlConnection(SQLConnectionString);
-            MySqlCommand MySqlCommand = new MySqlCommand(Execute, MySqlConnection);
+            string username = textBoxCreateUsername.Text;
+            string password = textBoxCreatePassword.Text;
+            string email = textBoxCreateEMail.Text;
+            int userID;
 
-            MySqlCommand.CommandTimeout = 30;
-            MySqlDataReader MySqlReader;
+            "INSERT INTO id (ID, USERNAME, PASSWORD, EMAIL) values (" + userID + "," + username + "," + password +"," + email + ");" 
         }
     }
 }

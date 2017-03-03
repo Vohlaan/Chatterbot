@@ -11,3 +11,13 @@ C:\Users\H3E\Documents\GitHub\test_projects\Loginsystem\Loginsystem\obj\Debug\Lo
 C:\Users\H3E\Documents\GitHub\test_projects\Loginsystem\Loginsystem\bin\Debug\MySql.Data.dll
 C:\Users\H3E\Documents\GitHub\test_projects\Loginsystem\Loginsystem\bin\Debug\Google.Protobuf.dll
 C:\Users\H3E\Documents\GitHub\test_projects\Loginsystem\Loginsystem\bin\Debug\MySql.Data.xml
+C:\Users\patrick\Documents\GitHub\test_projects\Loginsystem\Loginsystem\obj\Debug\Loginsystem.exe
+C:\Users\patrick\Documents\GitHub\test_projects\Loginsystem\Loginsystem\obj\Debug\Loginsystem.pdb
+C:\Users\patrick\Documents\GitHub\test_projects\Loginsystem\Loginsystem\obj\Debug\Loginsystem.LoginForm.resources
+C:\Users\patrick\Documents\GitHub\test_projects\Loginsystem\Loginsystem\obj\Debug\Loginsystem.Properties.Resources.resources
+C:\Users\patrick\Documents\GitHub\test_projects\Loginsystem\Loginsystem\obj\Debug\Loginsystem.csproj.GenerateResource.Cache
+C:\Users\patrick\Documents\GitHub\test_projects\Loginsystem\Loginsystem\bin\Debug\Loginsystem.exe
+C:\Users\patrick\Documents\GitHub\test_projects\Loginsystem\Loginsystem\bin\Debug\Loginsystem.pdb
+C:\Users\patrick\Documents\GitHub\test_projects\Loginsystem\Loginsystem\bin\Debug\MySql.Data.dll
+C:\Users\patrick\Documents\GitHub\test_projects\Loginsystem\Loginsystem\bin\Debug\Google.Protobuf.dll
+C:\Users\patrick\Documents\GitHub\test_projects\Loginsystem\Loginsystem\bin\Debug\MySql.Data.xml

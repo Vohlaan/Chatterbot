@@ -18,6 +18,25 @@ namespace Loginsystem
         public LoginForm()
         {
             InitializeComponent();
+
+            string SQLConnectionString = null;
+
+            XmlDocument xmlDoc = new XmlDocument();
+            xmlDoc.Load("..\\..\\..\\Data.xml");
+
+            XmlNodeList xmlListNode = xmlDoc.SelectNodes("root/Information/Database");
+            foreach (XmlNode iCounterNode in xmlListNode)
+            {
+                string datasource = iCounterNode["datasource"].InnerText;
+                string port = iCounterNode["port"].InnerText;
+
+                string username = iCounterNode["username"].InnerText;
+                string password = iCounterNode["password"].InnerText;
+
+                string database = iCounterNode["database"].InnerText;
+
+                SQLConnectionString = "datasource=" + datasource + ";" + "port=" + port + ";" + "username=" + username + ";" + "password=" + password + ";" + "database=" + database + ";";
+            }
         }
 
         private void LoginForm_Load(object sender, EventArgs e)
@@ -36,25 +55,7 @@ namespace Loginsystem
              2. Crypto
             */
 
-            string SQLConnectionString = null;
             string Execute = "SELECT * FROM ID where USERNAME = '" + textBoxUsername.Text + "'";
-
-            XmlDocument xmlDoc = new XmlDocument();
-            xmlDoc.Load("..\\..\\..\\Data.xml");
-
-            XmlNodeList xmlListNode = xmlDoc.SelectNodes("root/Information/Database");
-            foreach (XmlNode iCounterNode in xmlListNode)
-            {
-                string datasource = iCounterNode["datasource"].InnerText;
-                string port = iCounterNode["port"].InnerText;
-
-                string username = iCounterNode["username"].InnerText;
-                string password = iCounterNode["password"].InnerText;
-
-                string database = iCounterNode["database"].InnerText;
-                
-                SQLConnectionString = "datasource=" + datasource + ";" + "port=" + port + ";" + "username=" + username + ";" + "password=" + password + ";" + "database=" + database + ";";
-            }
 
             MySqlConnection MySqlConnection = new MySqlConnection(SQLConnectionString);
             MySqlCommand MySqlCommand = new MySqlCommand(Execute, MySqlConnection);
