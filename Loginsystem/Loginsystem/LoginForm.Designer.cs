@@ -35,20 +35,21 @@
             this.toolStripStatusLabelTimeText = new System.Windows.Forms.ToolStripStatusLabel();
             this.CurrentTimeTimer = new System.Windows.Forms.Timer(this.components);
             this.groupBoxLogin = new System.Windows.Forms.GroupBox();
-            this.groupBoxUser = new System.Windows.Forms.GroupBox();
             this.groupBoxVersion = new System.Windows.Forms.GroupBox();
-            this.groupBoxUsername = new System.Windows.Forms.GroupBox();
-            this.groupBoxPassword = new System.Windows.Forms.GroupBox();
-            this.buttonLogin = new System.Windows.Forms.Button();
-            this.textBoxUsername = new System.Windows.Forms.TextBox();
-            this.textBoxPassword = new System.Windows.Forms.TextBox();
             this.labelTextVersion = new System.Windows.Forms.Label();
+            this.groupBoxUser = new System.Windows.Forms.GroupBox();
+            this.buttonLogin = new System.Windows.Forms.Button();
+            this.groupBoxPassword = new System.Windows.Forms.GroupBox();
+            this.textBoxPassword = new System.Windows.Forms.TextBox();
+            this.groupBoxUsername = new System.Windows.Forms.GroupBox();
+            this.textBoxUsername = new System.Windows.Forms.TextBox();
+            this.buttonCreateLogin = new System.Windows.Forms.Button();
             this.statusStripButton.SuspendLayout();
             this.groupBoxLogin.SuspendLayout();
-            this.groupBoxUser.SuspendLayout();
             this.groupBoxVersion.SuspendLayout();
-            this.groupBoxUsername.SuspendLayout();
+            this.groupBoxUser.SuspendLayout();
             this.groupBoxPassword.SuspendLayout();
+            this.groupBoxUsername.SuspendLayout();
             this.SuspendLayout();
             // 
             // statusStripButton
@@ -89,17 +90,6 @@
             this.groupBoxLogin.TabStop = false;
             this.groupBoxLogin.Text = "Login: ";
             // 
-            // groupBoxUser
-            // 
-            this.groupBoxUser.Controls.Add(this.buttonLogin);
-            this.groupBoxUser.Controls.Add(this.groupBoxPassword);
-            this.groupBoxUser.Controls.Add(this.groupBoxUsername);
-            this.groupBoxUser.Location = new System.Drawing.Point(6, 19);
-            this.groupBoxUser.Name = "groupBoxUser";
-            this.groupBoxUser.Size = new System.Drawing.Size(266, 158);
-            this.groupBoxUser.TabIndex = 0;
-            this.groupBoxUser.TabStop = false;
-            // 
             // groupBoxVersion
             // 
             this.groupBoxVersion.Controls.Add(this.labelTextVersion);
@@ -110,15 +100,36 @@
             this.groupBoxVersion.TabStop = false;
             this.groupBoxVersion.Text = "Version:";
             // 
-            // groupBoxUsername
+            // labelTextVersion
             // 
-            this.groupBoxUsername.Controls.Add(this.textBoxUsername);
-            this.groupBoxUsername.Location = new System.Drawing.Point(6, 19);
-            this.groupBoxUsername.Name = "groupBoxUsername";
-            this.groupBoxUsername.Size = new System.Drawing.Size(254, 52);
-            this.groupBoxUsername.TabIndex = 0;
-            this.groupBoxUsername.TabStop = false;
-            this.groupBoxUsername.Text = "Username:";
+            this.labelTextVersion.AutoSize = true;
+            this.labelTextVersion.Location = new System.Drawing.Point(9, 16);
+            this.labelTextVersion.Name = "labelTextVersion";
+            this.labelTextVersion.Size = new System.Drawing.Size(36, 13);
+            this.labelTextVersion.TabIndex = 1;
+            this.labelTextVersion.Text = "x.x.x.x";
+            // 
+            // groupBoxUser
+            // 
+            this.groupBoxUser.Controls.Add(this.buttonCreateLogin);
+            this.groupBoxUser.Controls.Add(this.buttonLogin);
+            this.groupBoxUser.Controls.Add(this.groupBoxPassword);
+            this.groupBoxUser.Controls.Add(this.groupBoxUsername);
+            this.groupBoxUser.Location = new System.Drawing.Point(6, 19);
+            this.groupBoxUser.Name = "groupBoxUser";
+            this.groupBoxUser.Size = new System.Drawing.Size(266, 158);
+            this.groupBoxUser.TabIndex = 0;
+            this.groupBoxUser.TabStop = false;
+            // 
+            // buttonLogin
+            // 
+            this.buttonLogin.Location = new System.Drawing.Point(6, 129);
+            this.buttonLogin.Name = "buttonLogin";
+            this.buttonLogin.Size = new System.Drawing.Size(126, 23);
+            this.buttonLogin.TabIndex = 3;
+            this.buttonLogin.Text = "Login";
+            this.buttonLogin.UseVisualStyleBackColor = true;
+            this.buttonLogin.Click += new System.EventHandler(this.buttonLogin_Click);
             // 
             // groupBoxPassword
             // 
@@ -130,25 +141,6 @@
             this.groupBoxPassword.TabStop = false;
             this.groupBoxPassword.Text = "Password:";
             // 
-            // buttonLogin
-            // 
-            this.buttonLogin.Location = new System.Drawing.Point(6, 129);
-            this.buttonLogin.Name = "buttonLogin";
-            this.buttonLogin.Size = new System.Drawing.Size(254, 23);
-            this.buttonLogin.TabIndex = 3;
-            this.buttonLogin.Text = "Login";
-            this.buttonLogin.UseVisualStyleBackColor = true;
-            this.buttonLogin.Click += new System.EventHandler(this.buttonLogin_Click);
-            // 
-            // textBoxUsername
-            // 
-            this.textBoxUsername.Location = new System.Drawing.Point(6, 19);
-            this.textBoxUsername.MaxLength = 16;
-            this.textBoxUsername.Name = "textBoxUsername";
-            this.textBoxUsername.Size = new System.Drawing.Size(242, 20);
-            this.textBoxUsername.TabIndex = 1;
-            this.textBoxUsername.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // textBoxPassword
             // 
             this.textBoxPassword.Location = new System.Drawing.Point(6, 19);
@@ -159,14 +151,34 @@
             this.textBoxPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBoxPassword.UseSystemPasswordChar = true;
             // 
-            // labelTextVersion
+            // groupBoxUsername
             // 
-            this.labelTextVersion.AutoSize = true;
-            this.labelTextVersion.Location = new System.Drawing.Point(9, 16);
-            this.labelTextVersion.Name = "labelTextVersion";
-            this.labelTextVersion.Size = new System.Drawing.Size(36, 13);
-            this.labelTextVersion.TabIndex = 1;
-            this.labelTextVersion.Text = "x.x.x.x";
+            this.groupBoxUsername.Controls.Add(this.textBoxUsername);
+            this.groupBoxUsername.Location = new System.Drawing.Point(6, 19);
+            this.groupBoxUsername.Name = "groupBoxUsername";
+            this.groupBoxUsername.Size = new System.Drawing.Size(254, 52);
+            this.groupBoxUsername.TabIndex = 0;
+            this.groupBoxUsername.TabStop = false;
+            this.groupBoxUsername.Text = "Username:";
+            // 
+            // textBoxUsername
+            // 
+            this.textBoxUsername.Location = new System.Drawing.Point(6, 19);
+            this.textBoxUsername.MaxLength = 16;
+            this.textBoxUsername.Name = "textBoxUsername";
+            this.textBoxUsername.Size = new System.Drawing.Size(242, 20);
+            this.textBoxUsername.TabIndex = 1;
+            this.textBoxUsername.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // buttonCreateLogin
+            // 
+            this.buttonCreateLogin.Location = new System.Drawing.Point(132, 129);
+            this.buttonCreateLogin.Name = "buttonCreateLogin";
+            this.buttonCreateLogin.Size = new System.Drawing.Size(128, 23);
+            this.buttonCreateLogin.TabIndex = 4;
+            this.buttonCreateLogin.Text = "Konto Erstellen";
+            this.buttonCreateLogin.UseVisualStyleBackColor = true;
+            this.buttonCreateLogin.Click += new System.EventHandler(this.button1_Click);
             // 
             // LoginForm
             // 
@@ -183,13 +195,13 @@
             this.statusStripButton.ResumeLayout(false);
             this.statusStripButton.PerformLayout();
             this.groupBoxLogin.ResumeLayout(false);
-            this.groupBoxUser.ResumeLayout(false);
             this.groupBoxVersion.ResumeLayout(false);
             this.groupBoxVersion.PerformLayout();
-            this.groupBoxUsername.ResumeLayout(false);
-            this.groupBoxUsername.PerformLayout();
+            this.groupBoxUser.ResumeLayout(false);
             this.groupBoxPassword.ResumeLayout(false);
             this.groupBoxPassword.PerformLayout();
+            this.groupBoxUsername.ResumeLayout(false);
+            this.groupBoxUsername.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -210,6 +222,7 @@
         private System.Windows.Forms.TextBox textBoxPassword;
         private System.Windows.Forms.TextBox textBoxUsername;
         private System.Windows.Forms.Label labelTextVersion;
+        private System.Windows.Forms.Button buttonCreateLogin;
     }
 }
 

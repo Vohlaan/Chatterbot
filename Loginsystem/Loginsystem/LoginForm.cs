@@ -40,7 +40,7 @@ namespace Loginsystem
             string Execute = "SELECT * FROM ID where USERNAME = '" + textBoxUsername.Text + "'";
 
             XmlDocument xmlDoc = new XmlDocument();
-            xmlDoc.Load("C:\\Users\\H3E\\Documents\\GitHub\\test_projects\\Loginsystem\\Data.xml"); //Path aendern noch (nicht schoen geloest)
+            xmlDoc.Load("..\\..\\..\\Data.xml");
 
             XmlNodeList xmlListNode = xmlDoc.SelectNodes("root/Information/Database");
             foreach (XmlNode iCounterNode in xmlListNode)
@@ -53,7 +53,6 @@ namespace Loginsystem
 
                 string database = iCounterNode["database"].InnerText;
                 
-
                 SQLConnectionString = "datasource=" + datasource + ";" + "port=" + port + ";" + "username=" + username + ";" + "password=" + password + ";" + "database=" + database + ";";
             }
 
@@ -97,6 +96,13 @@ namespace Loginsystem
 
             textBoxUsername.Text = "";
             textBoxPassword.Text = "";
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            CreateLoginForm CreateLoginForm = new CreateLoginForm();
+            CreateLoginForm.Show();
         }
     }
 }
